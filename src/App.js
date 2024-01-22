@@ -6,6 +6,7 @@ import Visualize from "./Pages/Visualize";
 import Detect from "./Pages/Detect";
 import Advanced from "./Pages/Advanced";
 import BtoB from "./Pages/BtoB";
+import console from "console-browserify";
 
 function App() {
   return (
