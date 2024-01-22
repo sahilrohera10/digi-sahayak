@@ -1,11 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Dashboard from "./Pages/Dashboard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TxtDetails from "./Pages/TxtDetails";
 import Visualize from "./Pages/Visualize";
 import Detect from "./Pages/Detect";
-import transactionTracker from "./transactionTracker";
 import Advanced from "./Pages/Advanced";
 import BtoB from "./Pages/BtoB";
 
