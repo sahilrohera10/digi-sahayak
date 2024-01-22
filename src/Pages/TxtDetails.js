@@ -4,7 +4,6 @@ import axios from "axios";
 import { CryptoLogos, Button } from "@web3uikit/core";
 import { useNavigate } from "react-router-dom";
 import { Arrow } from "@web3uikit/icons";
-import TransactionList from "../Components/TransactionList";
 import configdata from "../config.json";
 
 export default function TxtDetails() {

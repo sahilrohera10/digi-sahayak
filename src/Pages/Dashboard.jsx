@@ -1,5 +1,4 @@
 import react, { useState, useEffect } from "react";
-import Table from "../Components/Table";
 import TableNew from "../Components/Table";
 import axios from "axios";
 import { CryptoLogos } from "@web3uikit/core";

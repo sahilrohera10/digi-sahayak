@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Avatar, Tag, Table, CryptoLogos } from "@web3uikit/core";
-import axios from "axios";
+import React from "react";
+import { Table } from "@web3uikit/core";
 
 const TableNew = ({ data, header, style }) => {
   return (

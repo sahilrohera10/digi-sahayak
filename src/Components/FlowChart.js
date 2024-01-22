@@ -1,17 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Bar } from "react-chartjs-2";
 
 const FlowChart = ({ incomingTransactions, outgoingTransactions }) => {
   const chartRef = useRef(null);
   console.log("out=>", outgoingTransactions);
-  // useEffect(() => {
-  //   // Destroy chart when the component is unmounted
-  //   return () => {
-  //     if (chartRef.current) {
-  //       chartRef.current.destroy();
-  //     }
-  //   };
-  // }, []);
 
   // Extract values for the chart
   const incomingValues = incomingTransactions.map((tx) => parseFloat(tx.value));
