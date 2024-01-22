@@ -12,7 +12,6 @@ export default function Advanced() {
   useEffect(() => {
     const highVol = async () => {
       const response = await axios.get(`${configdata.api}/high-volume`);
-      console.log("my new data=>", response.data.data);
       setData(response.data.data);
       setGetTable(true);
     };

@@ -21,21 +21,11 @@ export default function BtoB() {
     try {
       const block = await web3.eth.getBlock(blockNumber, true);
       if (block && block.transactions) {
-        console.log(
-          `Transactions in block ${blockNumber}:`,
-          block.transactions
-        );
         return block.transactions;
       } else {
-        console.log(`No transactions in block ${blockNumber}`);
         return [];
       }
-      // console.log("data:", data)
     } catch (error) {
-      console.error(
-        `Error retrieving block ${blockNumber} transactions:`,
-        error
-      );
       return [];
     }
   }
@@ -117,7 +107,6 @@ export default function BtoB() {
   ];
 
   const style = "130px 1fr 1fr 1fr 1fr 1fr  100px";
-  console.log("data", NewData);
 
   return (
     <div className="bg-slate-900 h-[100vh]">

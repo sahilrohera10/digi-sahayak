@@ -3,13 +3,11 @@ import { Bar } from "react-chartjs-2";
 
 const FlowChart = ({ incomingTransactions, outgoingTransactions }) => {
   const chartRef = useRef(null);
-  console.log("out=>", outgoingTransactions);
 
   // Extract values for the chart
   const incomingValues = incomingTransactions.map((tx) => parseFloat(tx.value));
   const outgoingValues = outgoingTransactions.map((tx) => parseFloat(tx.value));
-  console.log("inval=>", incomingValues);
-  console.log("outval=>", outgoingValues);
+
   // Create a Chart.js data object
   const data = {
     labels: ["Incoming Transactions", "Outgoing Transactions"],

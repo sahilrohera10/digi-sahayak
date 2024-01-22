@@ -105,7 +105,6 @@ export default function Visualize() {
     }
   };
   // const data = location.state?.data || {};
-  console.log("in visualize data =>", location.state.data);
   const incomingTransactions = location.state.data.filter(
     (tx) => tx.to_address.toLowerCase() === location.state.id.toLowerCase()
   );
@@ -114,8 +113,6 @@ export default function Visualize() {
     (tx) => tx.from_address.toLowerCase() === location.state.id.toLowerCase()
   );
 
-  console.log("incoming =>", incomingTransactions);
-  console.log("outcoming =>", outgoingTransactions);
   return (
     <div>
       {/* <p className="text-black font-2xl font-bold pt-8">Visualization</p> */}

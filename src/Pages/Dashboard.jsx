@@ -20,7 +20,6 @@ const Dashboard = () => {
   useEffect(() => {
     const getBlockInfo = async () => {
       const response = await axios.get(`${configdata.api}/getblockinfo`, {});
-      console.log("resp=>", response);
       const blockArray = [
         response.data.previousBlockInfo[0].transactions[0],
         response.data.previousBlockInfo[0].transactions[1],
@@ -40,11 +39,9 @@ const Dashboard = () => {
     };
 
     getBlockInfo();
-    console.log("data=>", blockResult);
   }, []);
 
   const handleSubmitId = async () => {
-    console.log("id=>", inpId);
     document.querySelector("#inputField").value = "";
 
     const response = await axios.get("http://localhost:8002/address", {
@@ -52,7 +49,6 @@ const Dashboard = () => {
     });
 
     setResult(response.data.result);
-    console.log("Id data =>", response.data.result);
   };
 
   const header1 = [

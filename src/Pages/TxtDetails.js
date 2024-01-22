@@ -15,7 +15,6 @@ export default function TxtDetails() {
   const [getTable, setGetTable] = useState(false);
 
   const handleSubmitId = async () => {
-    console.log("id=>", inpId);
     document.querySelector("#inputField").value = "";
 
     const response = await axios.get(`${configdata.api}/address`, {
@@ -23,7 +22,6 @@ export default function TxtDetails() {
     });
 
     setResult(response.data.result);
-    console.log("Id data =>", response.data.result);
     setGetTable(true);
   };
 
@@ -92,7 +90,6 @@ export default function TxtDetails() {
     };
 
     // Navigate to the next page and pass the data
-    console.log("visualize=>", data.data);
     data &&
       navigate("/visualize", {
         state: { data: data.data, id: data.walletAdd },
@@ -106,7 +103,6 @@ export default function TxtDetails() {
     };
 
     // Navigate to the next page and pass the data
-    console.log("detect=>", data.data);
     data &&
       navigate("/detect", {
         state: { data: data.data, id: data.id },
